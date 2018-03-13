@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Search results:</h2>
+<ol start="{{start}}">
+    {% if countries|length == 0 %}
+        <h2>No results</h2>
+    {% else %}
+    {% for city in countries %}
+        <li><a href = "/search/{{city._id}}" target="_blank">{{ city._source.name }}</a></li>
+    {% endfor %}
+    {% endif %}
+</ol>
+{% if hasNext %}
+<form action="/search/page/{{next}}" method="GET">
+    <input type="hidden" name = "country" value="{{request.args.country}}"/>
+    <input type="submit" value = "Next Page"/>
+</form>
+{% endif %}
+{% endblock %}

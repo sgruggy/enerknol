@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>{{city.name}}</h2>
+<p>Country code: {{city.country}}</p>
+<p>latitude: {{city.lat}}</p>
+<p>longitude: {{city.lng}}</p>
+</ul>
+{% block error %} {{error}} {% endblock %}
+{% endblock %}

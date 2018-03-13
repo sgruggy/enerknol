@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Register new account</h2>
+  <form method="POST">
+    Name:<input type="text" name="name"/>      
+    Username:<input type="text" name="username"/>
+    Password:<input type="text" name="password"/>
+    <input type="submit"/>
+  </form>
+{% block error %} {{error}} {% endblock %}
+{% endblock %}

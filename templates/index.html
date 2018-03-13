@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Welcome, {{user}}!</h2>
+<form action = '/search/page/1' method = "GET">
+Search:<input type='text' name='country'/>
+<input type="submit"/>
+</form>
+{% endblock %}
