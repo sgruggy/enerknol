@@ -2,7 +2,8 @@
 {% block content %}
 <h2>Welcome, {{user}}!</h2>
 <form action = '/search/page/1' method = "GET">
-Search:<input type='text' name='country'/>
+Search by country code:<input type='text' name='country'/>
 <input type="submit"/>
 </form>
+<h6>Recommended searches: Any country before the letter M</h6>
 {% endblock %}
